@@ -17,9 +17,12 @@ Template.recipes.helpers({
 
 Template.recipe.events({
 	'click .btn-add': function(event) {
-		Meteor.call('toggleMenuItem', this.id, this.inMenu);
+		Meteor.call('toggleMenuItem', this._id, this.inMenu);
 	},
 	'click .btn-remove': function(event) {
-		Meteor.call('toggleMenuItem', this.id, this.inMenu);
+		Meteor.call('toggleMenuItem', this._id, this.inMenu);
+	},
+	'click .fa-trash': function() {
+		Meteor.call('deleteRecipe', this._id)
 	}
 })

@@ -1,6 +1,7 @@
 <template name="recipe">
 	<article class="recipe">
 		<h3>{{name}}</h3>
+		<i class="fa fa-trash"></i>
 		<p>{{desc}}</p>
 		<p>
 			{{#each ingredients}}
@@ -15,6 +16,6 @@
 		<button class="btn-add">Add to Menu</button>
 		{{/if}}
 
-		{{> quickForm collection="Recipes" type="update" id=id doc=this class="update-recipe-form" autosave=true}}
+		{{> quickForm collection="Recipes" type="update" id=_id doc=this class="update-recipe-form" autosave=true}}
 	</article>
 </template>
