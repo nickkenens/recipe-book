@@ -1,0 +1,15 @@
+<template name="SingleRecipe">
+	<h1>{{recipe.name}}</h1>
+	<h3>{{recipe.desc}}</h3>
+
+	<h4>Ingredients</h4>
+	<ul>
+		{{#each recipe.ingredients}}
+		<li>{{name}} - {{amount}}</li>
+		{{/each}}
+	</ul>
+
+	<p>
+		{{recipe.createdAt}}
+	</p>
+</template>
