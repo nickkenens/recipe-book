@@ -1,9 +1,15 @@
 <template name="recipes">
-  {{> newRecipe }}
 
+  {{#if isOpen}}
+  {{> newRecipe }}
+  {{else}}
+  <button class="btn-openRecipe">
+    New Recipe
+  </button>
+  {{/if}}
   <section class="recipes">
     {{#each recipes}}
-      {{>recipe}}
+    {{>recipe}}
     {{/each}}
   </section>
 </template>

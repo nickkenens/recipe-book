@@ -3,7 +3,7 @@
 		<h3 class="recipe-title">{{name}}</h3>
 		<i class="fa fa-trash"></i>
 		<i class="fa fa-pencil"></i>
-		{{#if $.Session.get 'editMode'}}
+		{{#if editMode}}
 		{{> quickForm collection="Recipes" type="update" id=_id doc=this class="update-recipe-form" autosave=true}}
 		{{else}}
 		<p recipe-description>{{desc}}</p>
