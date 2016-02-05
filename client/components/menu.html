@@ -1,11 +1,14 @@
 <template name="menu">
-	<h1>Menu</h1>
 
-	<h3>Recipes in Menu</h3>
+	<div class="container">
+		<h1>Menu</h1>
 
-	{{#each recipesInMenu}}
-	{{>recipe}}
-	{{else}}
-	<h2>Please add <a href="/recipe-book">recipes</a> to your menu</h2>
-	{{/each}}
+		<h3>Recipes in Menu</h3>
+
+		{{#each recipesInMenu}}
+		{{>recipe}}
+		{{else}}
+		<h2>Please add <a href="/recipe-book">recipes</a> to your menu</h2>
+		{{/each}}
+	</div>
 </template>

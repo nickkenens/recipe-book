@@ -1,8 +1,6 @@
 <template name="MainLayout">
-  {{>header}}
-
-  {{> SideNav}}
-  <main>
-    {{> Template.dynamic template=main}}
+  {{> navbar}}
+  <main class="main-content-wrapper">
+      {{> Template.dynamic template=main}}
   </main>
 </template>
