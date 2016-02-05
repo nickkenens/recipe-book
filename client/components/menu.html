@@ -4,7 +4,7 @@
 	<h3>Recipes in Menu</h3>
 
 	{{#each recipesInMenu}}
-	{{>recipe name=name description=desc ingredients=ingredients createdAt=createdAt id=_id inMenu=inMenu}}
+	{{>recipe name=name desc=desc ingredients=ingredients createdAt=createdAt id=_id inMenu=inMenu}}
 	{{else}}
 	<h2>Please add <a href="/recipe-book">recipes</a> to your menu</h2>
 	{{/each}}
