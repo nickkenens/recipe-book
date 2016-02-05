@@ -1,3 +1,9 @@
 <template name="recipes">
   {{> newRecipe }}
+
+  <section class="recipes">
+    {{#each recipes}}
+      {{>recipe name=name description=desc ingredients=ingredients createdAt=createdAt}}
+    {{/each}}
+  </section>
 </template>
