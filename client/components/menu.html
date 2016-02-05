@@ -1,0 +1,9 @@
+<template name="menu">
+	<h1>Menu</h1>
+
+	<h3>Recipes in Menu</h3>
+
+	{{#each recipesInMenu}}
+	{{>recipe name=name description=desc ingredients=ingredients createdAt=createdAt id=_id inMenu=inMenu}}
+	{{/each}}
+</template>

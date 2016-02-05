@@ -14,3 +14,12 @@ Template.recipes.helpers({
 	}
 
 });
+
+Template.recipe.events({
+	'click .btn-add': function(event) {
+		Meteor.call('toggleMenuItem', this.id, this.inMenu);
+	},
+	'click .btn-remove': function(event) {
+		Meteor.call('toggleMenuItem', this.id, this.inMenu);
+	}
+})

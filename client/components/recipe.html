@@ -4,10 +4,15 @@
 		<p>{{description}}</p>
 		<p>
 			{{#each ingredients}}
-				{{name}} - {{amount}}
+			{{name}} - {{amount}}
 			{{/each}}
 		</p>
 		<p>Created At: {{createdAt}}</p>
 		<a href="/recipe/{{id}}">View Recipe Details</a>
+		{{#if inMenu}}
+		<button class="btn-remove">Remove from Menu</button>
+		{{else}}
+		<button class="btn-add">Add to Menu</button>
+		{{/if}}
 	</article>
 </template>
