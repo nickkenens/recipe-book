@@ -24,5 +24,8 @@ Template.recipe.events({
 	},
 	'click .fa-trash': function() {
 		Meteor.call('deleteRecipe', this._id)
+	},
+	'click .fa-pencil': function() {
+		Session.set('editMode', !Session.get('editMode'));
 	}
 })
